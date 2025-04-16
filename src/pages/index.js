@@ -7,7 +7,7 @@ export default function Home() {
 
   const buyProduct = () => {
     setState('ORDERING');
-    fetch('/api/hello', {
+    fetch('/api/startBuy', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -35,7 +35,7 @@ export default function Home() {
                 <span class="spinner-grow spinner-grow-sm" aria-hidden="true"></span>
                 <span role="status">Ordering...</span>
               </button></> ),
-              ORDERED: ( <button disabled type="button" className="btn btn-danger"> Ordered </ button> ),
+              ORDERED: ( <button disabled type="button" className="btn btn-danger"> Ordered Successfully! </ button> ),
               ERROR:   ( <button >Error! Click to Retry </button> ),
             }[state]
           }
